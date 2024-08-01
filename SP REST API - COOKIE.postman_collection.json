@@ -1,0 +1,2510 @@
+{
+	"info": {
+		"_postman_id": "0568baef-abf9-46b6-8e80-47b4e8d64d07",
+		"name": "SP REST API - COOKIE",
+		"description": "This document is related with SharePoint Rest API endpoint for different set of actions.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12475946"
+	},
+	"item": [
+		{
+			"name": "contextinfo",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"connection": true,
+					"accept-encoding": true,
+					"accept": true,
+					"user-agent": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{SiteUrl}}/_api/contextinfo",
+					"host": [
+						"{{SiteUrl}}"
+					],
+					"path": [
+						"_api",
+						"contextinfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RoleDefinitions",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "cookie",
+						"value": "FedAuth=77u/PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48U1A+VjEzLDBoLmZ8bWVtYmVyc2hpcHwxMDAzMjAwMDU0YmM0NGE4QGxpdmUuY29tLDAjLmZ8bWVtYmVyc2hpcHxzb21uYXRoQHBha3VyMi5vbm1pY3Jvc29mdC5jb20sMTMzNTAxNDg2NDEwMDAwMDAwLDEzMzQ4NzQwNjc3MDAwMDAwMCwxMzM1MjEwMjQxOTkwOTg5MTIsNDkuMjA3LjIzNC4xNzIsNjcsMGViMDFmNDMtZmY3Mi00NWU2LWJmOWUtODI0MDkzOTIxZmQ2LCwyOGE3ODA3YS03NTBhLTQ4ZTgtOTQyMi00YjEwZDdjYzEwOTUsYzNiYTA1YTEtYzBkMi0yMDAwLWQ2YjctYzY5YjIzMWQwNzRhLDkwZjAwOGExLWYwMDEtMjAwMC1mYjRhLTE5OWU3YzI0N2IzZCwsMCwxMzM1MTc1NjgxOTg5NDI3NDIsMTMzNTE5Mjk2MTk4OTQyNzQyLCwsZXlKNGJYTmZZMk1pT2lKYlhDSkRVREZjSWwwaUxDSjRiWE5mYzNOdElqb2lNU0lzSW5CeVpXWmxjbkpsWkY5MWMyVnlibUZ0WlNJNkluTnZiVzVoZEdoQWNHRnJkWEl5TG05dWJXbGpjbTl6YjJaMExtTnZiU0lzSW5WMGFTSTZJa2huWDFCeGNrdzVORlYxT0VGc2FYQjJkamhEUVVFaWZRPT0sMjY1MDQ2Nzc0Mzk5OTk5OTk5OSwxMzM1MDgwODcwMTAwMDAwMDAsNjg4MTQwYzQtODFhNS00ZGY2LWE2MDEtMTdjYWNmMGQ4OTFiLCwsLCwsMCwsMTk2NDc2LEdBZHhXWDNxZy1wbFA0ZTlYQlAxeTE2aWZqVSxkd0RqMG01NjdmTkRseU8yRUJmOXVRWjIvTUVSK1E0VEpmay9wYUF1SmNjWitYY0pIVVpvaFIzZ3p0VVlMcmZEYlRDb2tsVndsTG95NVRqM2c2WXhMRzRBYmQxQzVQNGRYcHIzNEgyNVJyTkl6MFBoVWlGNmVEcDNJZUVVVVZvYXp1SUo2b2wxMGFuRmN1WlB1OFJpOSs1UldzcE9NcFlmTzlPMTh4c3JMbmEyZlNBR3R4ZitUbkVjVDlpUnlnNG1mU0RDdXNzK3ltWU1zOHpUZzRsUHVQUG1mUHhZMEdwMVluakxabXpYY1hzL0xWSG1KMmlNNFFtTDdDVEIyMCtjQ3RQYTRzMnRwWkZMbktFZS9QMDVmZndtS0FhcUtZaHlvWWNXMzhkRXhPaXhyNWEreGlGYkVtZ1lzOTNPaUhUM2tWK2lmSHBMR3M1K1dPeGRrKzFDL1E9PTwvU1A+; expires=Sun, 11-Feb-2024 05:20:19 GMT; path=/; SameSite=None; secure; HttpOnly",
+						"type": "text"
+					},
+					{
+						"key": "cookie",
+						"value": "rtFa=dzfmZPHVngMAQWRGP+DFJmsuc4FjHW3mZq4n1TBrkoEmMGViMDFmNDMtZmY3Mi00NWU2LWJmOWUtODI0MDkzOTIxZmQ2IzEzMzUxMzcyODkxOTg1Mjk3MCNkMWQ0MDdhMS0yMDcxLTMwMDAtMDM5Ni1hYzIxMTI1OTA1ZTEjc29tbmF0aCU0MHBha3VyMi5vbm1pY3Jvc29mdC5jb20jMTk2NDc2I3Z0R0NiZVRHUGRpc1FLZWh2RXNQRi0xYU1KSTHb+ZJBwpJiojS/4/z9V/lmtbSYdYRhleD5t5cPploqfgzCV91Kt2faIRpS/cyl84/XppY8OCM8vCCNogJizfgz/gtAksLjW6iZ77QLRX8l6G/hOi/DNqiD09XFqHIWS511E6PRDYUSf9EZc5bk5DUDFxzahUUYbd0tBG92VjQjjtZd5+EG7dOHNq54eqF45PLVZVoXL8cr0lsdFIcbxmgfzpuGcrvrI8SUu1MejQFkkxgSdTxOyaRpMAl0tF0JR4tWuwXGov1IO/uZUHAoEh3NsY7aJhZc2ypNDSo9skksCWUDu1Pexe58tMDRLkxGg0wEG3Ip88QKOrDgMzYdy17BAAAA; domain=sharepoint.com; expires=Sun, 11-Feb-2024 05:20:19 GMT; path=/; SameSite=None; secure; HttpOnly",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{SiteUrl}}/_api/web/RoleDefinitions",
+					"host": [
+						"{{SiteUrl}}"
+					],
+					"path": [
+						"_api",
+						"web",
+						"RoleDefinitions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RoleAssignments",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"connection": true,
+					"accept-encoding": true,
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{SiteUrl}}/_api/web/RoleAssignments",
+					"host": [
+						"{{SiteUrl}}"
+					],
+					"path": [
+						"_api",
+						"web",
+						"RoleAssignments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "web-title",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "FedAuth=77u/PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48U1A+VjEzLDBoLmZ8bWVtYmVyc2hpcHwxMDAzMjAwMDU0YmM0NGE4QGxpdmUuY29tLDAjLmZ8bWVtYmVyc2hpcHxzb21uYXRoQHBha3VyMi5vbm1pY3Jvc29mdC5jb20sMTMzNTAxNDg2NDEwMDAwMDAwLDEzMzQ4NzQwNjc3MDAwMDAwMCwxMzM1MTI0MDcwMjI5OTc2NjQsNDkuMjA3LjIzNC4xNzIsNjcsMGViMDFmNDMtZmY3Mi00NWU2LWJmOWUtODI0MDkzOTIxZmQ2LCwyOGE3ODA3YS03NTBhLTQ4ZTgtOTQyMi00YjEwZDdjYzEwOTUsYzNiYTA1YTEtYzBkMi0yMDAwLWQ2YjctYzY5YjIzMWQwNzRhLGMzYmEwNWExLWMwZDItMjAwMC1kNmI3LWM2OWIyMzFkMDc0YSwsMCwxMzM1MDg5NTEwMjI2ODUxODEsMTMzNTEwNjc5MDIyNjg1MTgxLCwsZXlKNGJYTmZZMk1pT2lKYlhDSkRVREZjSWwwaUxDSjRiWE5mYzNOdElqb2lNU0lzSW5CeVpXWmxjbkpsWkY5MWMyVnlibUZ0WlNJNkluTnZiVzVoZEdoQWNHRnJkWEl5TG05dWJXbGpjbTl6YjJaMExtTnZiU0lzSW5WMGFTSTZJa2huWDFCeGNrdzVORlYxT0VGc2FYQjJkamhEUVVFaWZRPT0sMjY1MDQ2Nzc0Mzk5OTk5OTk5OSwxMzM1MDgwODcwMTAwMDAwMDAsNjg4MTQwYzQtODFhNS00ZGY2LWE2MDEtMTdjYWNmMGQ4OTFiLCwsLCwsMCwsMTk2NDc2LEdBZHhXWDNxZy1wbFA0ZTlYQlAxeTE2aWZqVSxCMFRsVzJIUnZDNVkrdm4wZEtwN2xCVXM2RzhsVFVERzgrdUNoRFMxdDJhS3JIZlBTeE1BQ0M0aHJCeExNZjErRDZVaFI5QWtOSWpyU2xBQ2NkNk1helNYclcwN09icXdKT1kxUVBhSTRIT1UzUTZjL3RUNkxoeUROVTBuTEJsZmpDTTk3NEdlZlk2aVVNNWtCcHFUOS9nNnkzZWNzbzQrdFJpQi9ubGxHMXpLMi9UVFAwUFRWTnJmNEphajd3bXo2WFFvMTFaM092R1FQam5DemRhcFdrWGNrSGFseG1Kb1UyVVF3YVR4Rkk1ZnRhSkJEY2hhdm5qbUtHRHh2aE5ramN4NDlRYkg2TnBDREZqZGNWdyt6NnlvQzZrMVJPT21yR2lLd1JUeVlDaFQzRmE4Vi8ranVOcWgzMkYxbG92V3E4YUtwVTEwd3Fpb0duTUlzZnphbFE9PTwvU1A+; odbn=1;",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Cookie",
+						"value": "rtFa=dzfmZPHVngMAQWRGP+DFJmsuc4FjHW3mZq4n1TBrkoEmMGViMDFmNDMtZmY3Mi00NWU2LWJmOWUtODI0MDkzOTIxZmQ2IzEzMzUwODA4NzY0MjY0MzI2NiNkMmJhMDVhMS05MGYyLTIwMDAtZjhhYi1mYWI2ZGQyOWNkNDYjc29tbmF0aCU0MHBha3VyMi5vbm1pY3Jvc29mdC5jb20jMTk2NDc2I3Z0R0NiZVRHUGRpc1FLZWh2RXNQRi0xYU1KSSX3VkT03nG+iPC9J2uxRmtbWpiLoWNXQWtzN9EBwHOswbjwcr4X8CTn+9So1YK6AxFBqrwqA9rfbsKjN/0JQzwBHBj3V2/p12Hk0d0iw8YnW3zhTG1+6Wu2kvAXOvWszmA9Fa2MxZPv4/DS7W8Gc03qqAqmdTDl39U/iN6+49pXzWawR+hZMxFo5UQkouYgemd0IBHqHu7a7yavOMrR2OSvOXi3Qr3VDsa2aaPHWC7LsSFJAUjuRa0XucmrEXndrjEE/QtediiQbIZ77mhg8tmi3BqnEse+F8d+nHmsV63FNqrq8YOGi4FZp7Rs7wanUm4hXpnjTQ0ZalDZK1QgVz3BAAAA; ScaleCompatibilityDeviceId=bd8aa9d7-ee83-4de6-83a0-7026b1e92011;",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "accept",
+						"value": "application/json;odata=verbose",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;odata=verbose",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{SiteUrl}}/_api/web?$select=Title",
+					"host": [
+						"{{SiteUrl}}"
+					],
+					"path": [
+						"_api",
+						"web"
+					],
+					"query": [
+						{
+							"key": "$select",
+							"value": "Title"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BaseTemplate",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"connection": true,
+					"accept-encoding": true,
+					"user-agent": true,
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json;odata=verbose",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;odata=verbose",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{SiteUrl}}/_api/web/lists?$select=title,BaseTemplate,EntityTypeName,ListItemEntityTypeFullName&$filter=BaseTemplate eq 101",
+					"host": [
+						"{{SiteUrl}}"
+					],
+					"path": [
+						"_api",
+						"web",
+						"lists"
+					],
+					"query": [
+						{
+							"key": "$select",
+							"value": "title,BaseTemplate,EntityTypeName,ListItemEntityTypeFullName"
+						},
+						{
+							"key": "$filter",
+							"value": "BaseTemplate eq 101"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list-items",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept-encoding": true,
+					"accept": true,
+					"user-agent": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json;odata=verbose",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{SiteUrl}}/_api/web/lists/getbytitle('megablogarticle')/items",
+					"host": [
+						"{{SiteUrl}}"
+					],
+					"path": [
+						"_api",
+						"web",
+						"lists",
+						"getbytitle('megablogarticle')",
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list-item versions",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true,
+					"user-agent": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json;odata=verbose",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{SiteUrl}}/_api/web/lists/getbytitle('megablogarticle')/items(105)/versions",
+					"host": [
+						"{{SiteUrl}}"
+					],
+					"path": [
+						"_api",
+						"web",
+						"lists",
+						"getbytitle('megablogarticle')",
+						"items(105)",
+						"versions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "item-create",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"content-type": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-http-method",
+						"value": "DELETE",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "X-RequestDigest",
+						"value": "0x5CAC86B04081631A82E8D669EAA45F615459E6D13BA4A935A633311467E7DC64D300136657D1E5654A95FB32F535DD4AEF638B4786E962A53E7C206FDA9E8630,31 Jan 2024 05:09:57 -0000",
+						"type": "text"
+					},
+					{
+						"key": "if-match",
+						"value": "*",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Title\":\"Content 3\",\r\n    \"Description\":\"Description 3\",\r\n    \"ContentType0Id\":2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{SiteUrl}}/_api/web/lists/getbytitle('content')/items",
+					"host": [
+						"{{SiteUrl}}"
+					],
+					"path": [
+						"_api",
+						"web",
+						"lists",
+						"getbytitle('content')",
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "item-delete",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json;odata=verbose",
+						"type": "text"
+					},
+					{
+						"key": "x-http-method",
+						"value": "DELETE",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;odata=verbose",
+						"type": "text"
+					},
+					{
+						"key": "X-RequestDigest",
+						"value": "0x63EDAA3D67B99055B08B50A231BF653BB16E92225A9ECAE5DC0DB1B531AE8C89D47D51978A6121BA1B27BE6354F84414A9750FFF151C8D3C418BEE6C5D589214,31 Jan 2024 04:39:33 -0000",
+						"type": "text"
+					},
+					{
+						"key": "if-match",
+						"value": "\"22\"",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Title\":\"Content 2\",\r\n    \"Description\":\"Description 2\",\r\n    \"ContentType0ID\":2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{SiteUrl}}/_api/web/lists/getbytitle('megablogarticle')/items(2)",
+					"host": [
+						"{{SiteUrl}}"
+					],
+					"path": [
+						"_api",
+						"web",
+						"lists",
+						"getbytitle('megablogarticle')",
+						"items(2)"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "item-update",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"user-agent": true,
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-requestdigest",
+						"value": "0x4C1F7042016EA4A6C407FFA75F0298F739DE580B6C244F2DF413441429C2EEC3CDEC5D47DC0898BD48FAF7449972FFDD9405F96C0D4806CC142D68A437D53335,31 Jan 2024 06:38:52 -0000",
+						"type": "text"
+					},
+					{
+						"key": "X-HTTP-METHOD",
+						"value": "MERGE",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "IF-MATCH",
+						"value": "*",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Title\":\"Content 3\",\r\n    \"Description\":\"Description 33\",\r\n    \"ContentType0Id\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{SiteUrl}}/_api/web/lists/getbytitle('content')/items(3)",
+					"host": [
+						"{{SiteUrl}}"
+					],
+					"path": [
+						"_api",
+						"web",
+						"lists",
+						"getbytitle('content')",
+						"items(3)"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "item-update - Without Affecting version number",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"user-agent": true,
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-requestdigest",
+						"value": "0xE2175C38AD0DCC2E43C7E5D402DCEC34E255E1F29615F6C496AEE70D9CFB8B82CC70437BBDB943EBE33B5700BA46AEB372EE92AF50FF74C91CFEE5189FA2C4B0,31 Jan 2024 17:17:04 -0000",
+						"type": "text"
+					},
+					{
+						"key": "X-HTTP-METHOD",
+						"value": "MERGE",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "IF-MATCH",
+						"value": "*",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"formValues\":\r\n    [\r\n        {\r\n            \"FieldName\":\"Title\",\r\n            \"FieldValue\":\"Content 59\"\r\n        },\r\n        {\r\n            \"FieldName\":\"Description\",\r\n            \"FieldValue\":\"Description 59\"\r\n        },\r\n        {\r\n            \"FieldName\":\"ContentType0\",\r\n            \"FieldValue\":\"1\"\r\n        },\r\n        {\r\n            \"FieldName\":\"Author\",\r\n            \"FieldValue\":\"[{'key':'i:0#.f|membership|bubai@pakur2.onmicrosoft.com'}]\"\r\n        },\r\n         {\r\n            \"FieldName\":\"Editor\",\r\n            \"FieldValue\":\"[{'key':'i:0#.f|membership|bubai@pakur2.onmicrosoft.com'}]\"\r\n        }\r\n    ],\r\n    \"bNewDocumentUpdate\":true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{SiteUrl}}/_api/web/lists/getbytitle('content')/items(3)/validateUpdateListItem()",
+					"host": [
+						"{{SiteUrl}}"
+					],
+					"path": [
+						"_api",
+						"web",
+						"lists",
+						"getbytitle('content')",
+						"items(3)",
+						"validateUpdateListItem()"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Attachment to List item",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"user-agent": true,
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-requestdigest",
+						"value": "0x63EDAA3D67B99055B08B50A231BF653BB16E92225A9ECAE5DC0DB1B531AE8C89D47D51978A6121BA1B27BE6354F84414A9750FFF151C8D3C418BEE6C5D589214,31 Jan 2024 04:39:33 -0000",
+						"type": "text"
+					},
+					{
+						"key": "X-HTTP-METHOD",
+						"value": "MERGE",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;odata=verbose",
+						"type": "text"
+					},
+					{
+						"key": "IF-MATCH",
+						"value": "*",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json;odata=verbose",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": "postman-cloud:///1eebebf6-0629-4b10-8715-ab355dfc09c6"
+					}
+				},
+				"url": {
+					"raw": "{{SiteUrl}}/_api/web/lists/getbytitle('content')/items(1)/AttachmentFiles/add(filename='3.pdf')",
+					"host": [
+						"{{SiteUrl}}"
+					],
+					"path": [
+						"_api",
+						"web",
+						"lists",
+						"getbytitle('content')",
+						"items(1)",
+						"AttachmentFiles",
+						"add(filename='3.pdf')"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Attachment of List item",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"accept": true,
+					"user-agent": true,
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-requestdigest",
+						"value": "0x9B6B3E291E158BB5468979EFE2713793B68373B4C92718BDCEC3D147241F1CE8057098163D35608869B9E1E0BD3EF0319D0D1738FA04BD5BC91BFC41194F76B1,28 Jan 2024 14:39:41 -0000",
+						"type": "text"
+					},
+					{
+						"key": "X-HTTP-METHOD",
+						"value": "MERGE",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;odata=verbose",
+						"type": "text"
+					},
+					{
+						"key": "IF-MATCH",
+						"value": "*",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json;odata=verbose",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"__metadata\": {\r\n        \"type\": \"SP.Data.IdeasListItem\"\r\n    },\r\n    \"Title\": \"Test-updated92aasasaewewesas\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{SiteUrl}}/_api/web/lists/getbytitle('content')/items(2)/AttachmentFiles",
+					"host": [
+						"{{SiteUrl}}"
+					],
+					"path": [
+						"_api",
+						"web",
+						"lists",
+						"getbytitle('content')",
+						"items(2)",
+						"AttachmentFiles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Attachment of List item",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"user-agent": true,
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-requestdigest",
+						"value": "0x5CAC86B04081631A82E8D669EAA45F615459E6D13BA4A935A633311467E7DC64D300136657D1E5654A95FB32F535DD4AEF638B4786E962A53E7C206FDA9E8630,31 Jan 2024 05:09:57 -0000",
+						"type": "text"
+					},
+					{
+						"key": "X-HTTP-METHOD",
+						"value": "MERGE",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;odata=verbose",
+						"type": "text"
+					},
+					{
+						"key": "IF-MATCH",
+						"value": "*",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json;odata=verbose",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": "postman-cloud:///1eebff6a-0443-4a30-93bc-8619f5bf280e"
+					}
+				},
+				"url": {
+					"raw": "{{SiteUrl}}/_api/web/getfolderbyserverrelativeurl('/sites/TestCommunicationSite/Lists/Content/Attachments/1')/files/add(url='3.pdf',overwrite=true)",
+					"host": [
+						"{{SiteUrl}}"
+					],
+					"path": [
+						"_api",
+						"web",
+						"getfolderbyserverrelativeurl('",
+						"sites",
+						"TestCommunicationSite",
+						"Lists",
+						"Content",
+						"Attachments",
+						"1')",
+						"files",
+						"add(url='3.pdf',overwrite=true)"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Attachment of List item",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"user-agent": true,
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-requestdigest",
+						"value": "0x4D1487DB80D58A25218B93911A2781312DDA0155F30C16CD08AA172C0A3362C7492858025EC036BC5FD53088EAC68CECC9BA979050DE00C67CD5225CE2A74B5C,30 Jan 2024 18:35:35 -0000",
+						"type": "text"
+					},
+					{
+						"key": "X-HTTP-METHOD",
+						"value": "DELETE",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;odata=verbose",
+						"type": "text"
+					},
+					{
+						"key": "IF-MATCH",
+						"value": "*",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json;odata=verbose",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"__metadata\": {\r\n        \"type\": \"SP.Data.IdeasListItem\"\r\n    },\r\n    \"Title\": \"Test-updated92aasasaewewesas\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{SiteUrl}}/_api/web/lists/getbytitle('content')/items(1)/AttachmentFiles('1.pdf')",
+					"host": [
+						"{{SiteUrl}}"
+					],
+					"path": [
+						"_api",
+						"web",
+						"lists",
+						"getbytitle('content')",
+						"items(1)",
+						"AttachmentFiles('1.pdf')"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "File",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"accept": true,
+					"user-agent": true,
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-requestdigest",
+						"value": "0x5EF3AAFBF195E3469AA7CEF9DDEB11879D47E16214ECB0FF4815A985ED447944F685B6D25C9A7D7A73805C796096E2EB082B95536E86533D3BA989F93813B171,27 Jan 2024 08:17:02 -0000",
+						"type": "text"
+					},
+					{
+						"key": "X-HTTP-METHOD",
+						"value": "MERGE",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;odata=verbose",
+						"type": "text"
+					},
+					{
+						"key": "IF-MATCH",
+						"value": "*",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json;odata=verbose",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"__metadata\": {\r\n        \"type\": \"SP.Data.IdeasListItem\"\r\n    },\r\n    \"Title\": \"Test-updated92aasasaewewesas\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{SiteUrl}}/_api/web/GetFileByServerRelativeUrl('/sites/TestCommunicationSite/MegaBlogArticle/IMG_20210912_083254367 (1)1699597351986.jpg')",
+					"host": [
+						"{{SiteUrl}}"
+					],
+					"path": [
+						"_api",
+						"web",
+						"GetFileByServerRelativeUrl('",
+						"sites",
+						"TestCommunicationSite",
+						"MegaBlogArticle",
+						"IMG_20210912_083254367 (1)1699597351986.jpg')"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Files By Folder",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"accept": true,
+					"user-agent": true,
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-requestdigest",
+						"value": "0x5EF3AAFBF195E3469AA7CEF9DDEB11879D47E16214ECB0FF4815A985ED447944F685B6D25C9A7D7A73805C796096E2EB082B95536E86533D3BA989F93813B171,27 Jan 2024 08:17:02 -0000",
+						"type": "text"
+					},
+					{
+						"key": "X-HTTP-METHOD",
+						"value": "MERGE",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;odata=verbose",
+						"type": "text"
+					},
+					{
+						"key": "IF-MATCH",
+						"value": "*",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json;odata=verbose",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"__metadata\": {\r\n        \"type\": \"SP.Data.IdeasListItem\"\r\n    },\r\n    \"Title\": \"Test-updated92aasasaewewesas\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{SiteUrl}}/_api/web/GetFolderByServerRelativeUrl('/sites/TestCommunicationSite/MegaBlogArticle')/Files",
+					"host": [
+						"{{SiteUrl}}"
+					],
+					"path": [
+						"_api",
+						"web",
+						"GetFolderByServerRelativeUrl('",
+						"sites",
+						"TestCommunicationSite",
+						"MegaBlogArticle')",
+						"Files"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a folder",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"user-agent": true,
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-requestdigest",
+						"value": "0xF7AB8167867DEC41C251C2707D820C6057BD0DDD179F99A88BF162B53B02038074AFAEE3D1B68A9331F83DFB093B494D567A7328850F70D4520BAD9243F8BC98,31 Jan 2024 05:40:35 -0000",
+						"type": "text"
+					},
+					{
+						"key": "X-HTTP-METHOD",
+						"value": "MERGE",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "IF-MATCH",
+						"value": "*",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ServerRelativeUrl\":\"/sites/TestCommunicationSite/MegaBlogArticle/attachments\"\r\n}"
+				},
+				"url": {
+					"raw": "{{SiteUrl}}/_api/web/folders",
+					"host": [
+						"{{SiteUrl}}"
+					],
+					"path": [
+						"_api",
+						"web",
+						"folders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Site Groups",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"accept": true,
+					"user-agent": true,
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-requestdigest",
+						"value": "0x5EF3AAFBF195E3469AA7CEF9DDEB11879D47E16214ECB0FF4815A985ED447944F685B6D25C9A7D7A73805C796096E2EB082B95536E86533D3BA989F93813B171,27 Jan 2024 08:17:02 -0000",
+						"type": "text"
+					},
+					{
+						"key": "X-HTTP-METHOD",
+						"value": "MERGE",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;odata=verbose",
+						"type": "text"
+					},
+					{
+						"key": "IF-MATCH",
+						"value": "*",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json;odata=verbose",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"__metadata\": {\r\n        \"type\": \"SP.Data.IdeasListItem\"\r\n    },\r\n    \"Title\": \"Test-updated92aasasaewewesas\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{SiteUrl}}/_api/web/sitegroups",
+					"host": [
+						"{{SiteUrl}}"
+					],
+					"path": [
+						"_api",
+						"web",
+						"sitegroups"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Site Groups Users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"accept": true,
+					"user-agent": true,
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-requestdigest",
+						"value": "0x5EF3AAFBF195E3469AA7CEF9DDEB11879D47E16214ECB0FF4815A985ED447944F685B6D25C9A7D7A73805C796096E2EB082B95536E86533D3BA989F93813B171,27 Jan 2024 08:17:02 -0000",
+						"type": "text"
+					},
+					{
+						"key": "X-HTTP-METHOD",
+						"value": "MERGE",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;odata=verbose",
+						"type": "text"
+					},
+					{
+						"key": "IF-MATCH",
+						"value": "*",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json;odata=verbose",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"__metadata\": {\r\n        \"type\": \"SP.Data.IdeasListItem\"\r\n    },\r\n    \"Title\": \"Test-updated92aasasaewewesas\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{SiteUrl}}/_api/web/sitegroups/getbyid(3)/users",
+					"host": [
+						"{{SiteUrl}}"
+					],
+					"path": [
+						"_api",
+						"web",
+						"sitegroups",
+						"getbyid(3)",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Site Groups Users Filter",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"accept": true,
+					"user-agent": true,
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-requestdigest",
+						"value": "0x5EF3AAFBF195E3469AA7CEF9DDEB11879D47E16214ECB0FF4815A985ED447944F685B6D25C9A7D7A73805C796096E2EB082B95536E86533D3BA989F93813B171,27 Jan 2024 08:17:02 -0000",
+						"type": "text"
+					},
+					{
+						"key": "X-HTTP-METHOD",
+						"value": "MERGE",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;odata=verbose",
+						"type": "text"
+					},
+					{
+						"key": "IF-MATCH",
+						"value": "*",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json;odata=verbose",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"__metadata\": {\r\n        \"type\": \"SP.Data.IdeasListItem\"\r\n    },\r\n    \"Title\": \"Test-updated92aasasaewewesas\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{SiteUrl}}/_api/web/sitegroups?$filter=substringof('Test',Title)",
+					"host": [
+						"{{SiteUrl}}"
+					],
+					"path": [
+						"_api",
+						"web",
+						"sitegroups"
+					],
+					"query": [
+						{
+							"key": "$filter",
+							"value": "substringof('Test',Title)"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Site Users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"accept": true,
+					"user-agent": true,
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-requestdigest",
+						"value": "0x5EF3AAFBF195E3469AA7CEF9DDEB11879D47E16214ECB0FF4815A985ED447944F685B6D25C9A7D7A73805C796096E2EB082B95536E86533D3BA989F93813B171,27 Jan 2024 08:17:02 -0000",
+						"type": "text"
+					},
+					{
+						"key": "X-HTTP-METHOD",
+						"value": "MERGE",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;odata=verbose",
+						"type": "text"
+					},
+					{
+						"key": "IF-MATCH",
+						"value": "*",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json;odata=verbose",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"__metadata\": {\r\n        \"type\": \"SP.Data.IdeasListItem\"\r\n    },\r\n    \"Title\": \"Test-updated92aasasaewewesas\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{SiteUrl}}/_api/web/siteusers",
+					"host": [
+						"{{SiteUrl}}"
+					],
+					"path": [
+						"_api",
+						"web",
+						"siteusers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Site Users's Group",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"accept": true,
+					"user-agent": true,
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-requestdigest",
+						"value": "0x5EF3AAFBF195E3469AA7CEF9DDEB11879D47E16214ECB0FF4815A985ED447944F685B6D25C9A7D7A73805C796096E2EB082B95536E86533D3BA989F93813B171,27 Jan 2024 08:17:02 -0000",
+						"type": "text"
+					},
+					{
+						"key": "X-HTTP-METHOD",
+						"value": "MERGE",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;odata=verbose",
+						"type": "text"
+					},
+					{
+						"key": "IF-MATCH",
+						"value": "*",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json;odata=verbose",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"__metadata\": {\r\n        \"type\": \"SP.Data.IdeasListItem\"\r\n    },\r\n    \"Title\": \"Test-updated92aasasaewewesas\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{SiteUrl}}/_api/web/siteusers/getbyid(10)/groups",
+					"host": [
+						"{{SiteUrl}}"
+					],
+					"path": [
+						"_api",
+						"web",
+						"siteusers",
+						"getbyid(10)",
+						"groups"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Current User's Group",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"accept": true,
+					"user-agent": true,
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-requestdigest",
+						"value": "0x5EF3AAFBF195E3469AA7CEF9DDEB11879D47E16214ECB0FF4815A985ED447944F685B6D25C9A7D7A73805C796096E2EB082B95536E86533D3BA989F93813B171,27 Jan 2024 08:17:02 -0000",
+						"type": "text"
+					},
+					{
+						"key": "X-HTTP-METHOD",
+						"value": "MERGE",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;odata=verbose",
+						"type": "text"
+					},
+					{
+						"key": "IF-MATCH",
+						"value": "*",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json;odata=verbose",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"__metadata\": {\r\n        \"type\": \"SP.Data.IdeasListItem\"\r\n    },\r\n    \"Title\": \"Test-updated92aasasaewewesas\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{SiteUrl}}/_api/web/currentuser/groups",
+					"host": [
+						"{{SiteUrl}}"
+					],
+					"path": [
+						"_api",
+						"web",
+						"currentuser",
+						"groups"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add User to Group",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"user-agent": true,
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-requestdigest",
+						"value": "0xD411D98FF88AFC2A15A372C9B9BEDFC52135495B3D7A7112CDC20CB22136107059D0DBF47E656D5C1514F65C893BC8B9D1456B477AAA1551AD0DF50CD5CAD14F,28 Jan 2024 16:14:27 -0000",
+						"type": "text"
+					},
+					{
+						"key": "X-HTTP-METHOD",
+						"value": "MERGE",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "IF-MATCH",
+						"value": "*",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"LoginName\": \"i:0#.f|membership|bubai@pakur2.onmicrosoft.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{SiteUrl}}/_api/web/sitegroups/getbyid(4)/users",
+					"host": [
+						"{{SiteUrl}}"
+					],
+					"path": [
+						"_api",
+						"web",
+						"sitegroups",
+						"getbyid(4)",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RemoveUser from Group",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"user-agent": true,
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-requestdigest",
+						"value": "0x1A34F020FFBEED3171A9BC725A3C7EEC11A6C19FED11E5BC4D1C79CECD4D2E531D721F0574A38DF6F3B734FC76266823522C833B0D5AC82D077916849BCB4175,29 Jan 2024 04:38:37 -0000",
+						"type": "text"
+					},
+					{
+						"key": "X-HTTP-METHOD",
+						"value": "MERGE",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "IF-MATCH",
+						"value": "*",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{SiteUrl}}/_api/web/sitegroups/getbyid(4)/users/RemoveById(10)",
+					"host": [
+						"{{SiteUrl}}"
+					],
+					"path": [
+						"_api",
+						"web",
+						"sitegroups",
+						"getbyid(4)",
+						"users",
+						"RemoveById(10)"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BreakRoleInheritance",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"user-agent": true,
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-requestdigest",
+						"value": "0xDF88EFA4811ADA50D141A728015FED511C6C784E764096A2ABEF2980983FC580DD2B39EE28E331EE1A2B8EB039A9BC28E07A71D52B49268BF25E1C186C0901DD,29 Jan 2024 05:33:35 -0000",
+						"type": "text"
+					},
+					{
+						"key": "X-HTTP-METHOD",
+						"value": "MERGE",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "IF-MATCH",
+						"value": "*",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{SiteUrl}}/_api/web/lists/GETBYTITLE('site pages')/items(1)/BreakRoleInheritance(CopyRoleAssignments=false, ClearSubscopes=true)",
+					"host": [
+						"{{SiteUrl}}"
+					],
+					"path": [
+						"_api",
+						"web",
+						"lists",
+						"GETBYTITLE('site pages')",
+						"items(1)",
+						"BreakRoleInheritance(CopyRoleAssignments=false, ClearSubscopes=true)"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddRoleAssignment",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"user-agent": true,
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-requestdigest",
+						"value": "0xDF88EFA4811ADA50D141A728015FED511C6C784E764096A2ABEF2980983FC580DD2B39EE28E331EE1A2B8EB039A9BC28E07A71D52B49268BF25E1C186C0901DD,29 Jan 2024 05:33:35 -0000",
+						"type": "text"
+					},
+					{
+						"key": "X-HTTP-METHOD",
+						"value": "MERGE",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "IF-MATCH",
+						"value": "*",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{SiteUrl}}/_api/web/lists/GETBYTITLE('site pages')/items(1)/roleassignments/addroleassignment(principalid=10,roledefid=1073741826)",
+					"host": [
+						"{{SiteUrl}}"
+					],
+					"path": [
+						"_api",
+						"web",
+						"lists",
+						"GETBYTITLE('site pages')",
+						"items(1)",
+						"roleassignments",
+						"addroleassignment(principalid=10,roledefid=1073741826)"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RemoveRoleAssignment",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"user-agent": true,
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-requestdigest",
+						"value": "0xDF88EFA4811ADA50D141A728015FED511C6C784E764096A2ABEF2980983FC580DD2B39EE28E331EE1A2B8EB039A9BC28E07A71D52B49268BF25E1C186C0901DD,29 Jan 2024 05:33:35 -0000",
+						"type": "text"
+					},
+					{
+						"key": "X-HTTP-METHOD",
+						"value": "MERGE",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "IF-MATCH",
+						"value": "*",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{SiteUrl}}/_api/web/lists/GETBYTITLE('site pages')/items(1)/roleassignments/RemoveRoleAssignment(principalid=10)",
+					"host": [
+						"{{SiteUrl}}"
+					],
+					"path": [
+						"_api",
+						"web",
+						"lists",
+						"GETBYTITLE('site pages')",
+						"items(1)",
+						"roleassignments",
+						"RemoveRoleAssignment(principalid=10)"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ResetRoleInheritance",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"user-agent": true,
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-requestdigest",
+						"value": "0xDF88EFA4811ADA50D141A728015FED511C6C784E764096A2ABEF2980983FC580DD2B39EE28E331EE1A2B8EB039A9BC28E07A71D52B49268BF25E1C186C0901DD,29 Jan 2024 05:33:35 -0000",
+						"type": "text"
+					},
+					{
+						"key": "X-HTTP-METHOD",
+						"value": "MERGE",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "IF-MATCH",
+						"value": "*",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{SiteUrl}}/_api/web/lists/GETBYTITLE('site pages')/items(1)/ResetRoleInheritance()",
+					"host": [
+						"{{SiteUrl}}"
+					],
+					"path": [
+						"_api",
+						"web",
+						"lists",
+						"GETBYTITLE('site pages')",
+						"items(1)",
+						"ResetRoleInheritance()"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload/Add/Update File",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"user-agent": true,
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-requestdigest",
+						"value": "0x263746D47228ADAAAAE71E93110B6A729A5208937934152B2F5D1EBE48117FB581FE56123E56CF6B5A94BE7B259120995F1236E332B5C897CD6205B9231868DD,29 Jan 2024 16:23:09 -0000",
+						"type": "text"
+					},
+					{
+						"key": "X-HTTP-METHOD",
+						"value": "MERGE",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "IF-MATCH",
+						"value": "*",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": "postman-cloud:///1eebebf6-0629-4b10-8715-ab355dfc09c6"
+					}
+				},
+				"url": {
+					"raw": "{{SiteUrl}}/_api/web/getfolderbyserverrelativeurl('/sites/TestCommunicationSite/megablogarticle')/files/add(url='Certificate-FF.Pdf',overwrite=true)",
+					"host": [
+						"{{SiteUrl}}"
+					],
+					"path": [
+						"_api",
+						"web",
+						"getfolderbyserverrelativeurl('",
+						"sites",
+						"TestCommunicationSite",
+						"megablogarticle')",
+						"files",
+						"add(url='Certificate-FF.Pdf',overwrite=true)"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "File ListItemAllFields",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"accept": true,
+					"user-agent": true,
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-requestdigest",
+						"value": "0x263746D47228ADAAAAE71E93110B6A729A5208937934152B2F5D1EBE48117FB581FE56123E56CF6B5A94BE7B259120995F1236E332B5C897CD6205B9231868DD,29 Jan 2024 16:23:09 -0000",
+						"type": "text"
+					},
+					{
+						"key": "X-HTTP-METHOD",
+						"value": "MERGE",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "IF-MATCH",
+						"value": "*",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": ""
+					}
+				},
+				"url": {
+					"raw": "{{SiteUrl}}/_api/web/getfolderbyserverrelativeurl('/sites/TestCommunicationSite/megablogarticle')/files('Certificate-TT.Pdf')?$expand=ListItemAllFields/RoleAssignments",
+					"host": [
+						"{{SiteUrl}}"
+					],
+					"path": [
+						"_api",
+						"web",
+						"getfolderbyserverrelativeurl('",
+						"sites",
+						"TestCommunicationSite",
+						"megablogarticle')",
+						"files('Certificate-TT.Pdf')"
+					],
+					"query": [
+						{
+							"key": "$expand",
+							"value": "ListItemAllFields/RoleAssignments"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "File $value",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"accept": true,
+					"user-agent": true,
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-requestdigest",
+						"value": "0x263746D47228ADAAAAE71E93110B6A729A5208937934152B2F5D1EBE48117FB581FE56123E56CF6B5A94BE7B259120995F1236E332B5C897CD6205B9231868DD,29 Jan 2024 16:23:09 -0000",
+						"type": "text"
+					},
+					{
+						"key": "X-HTTP-METHOD",
+						"value": "MERGE",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "IF-MATCH",
+						"value": "*",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": ""
+					}
+				},
+				"url": {
+					"raw": "{{SiteUrl}}/_api/web/getfolderbyserverrelativeurl('/sites/TestCommunicationSite/megablogarticle')/files('Certificate-FF.Pdf')/ $value",
+					"host": [
+						"{{SiteUrl}}"
+					],
+					"path": [
+						"_api",
+						"web",
+						"getfolderbyserverrelativeurl('",
+						"sites",
+						"TestCommunicationSite",
+						"megablogarticle')",
+						"files('Certificate-FF.Pdf')",
+						" $value"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "File Versions",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"accept": true,
+					"user-agent": true,
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-requestdigest",
+						"value": "0x263746D47228ADAAAAE71E93110B6A729A5208937934152B2F5D1EBE48117FB581FE56123E56CF6B5A94BE7B259120995F1236E332B5C897CD6205B9231868DD,29 Jan 2024 16:23:09 -0000",
+						"type": "text"
+					},
+					{
+						"key": "X-HTTP-METHOD",
+						"value": "MERGE",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "IF-MATCH",
+						"value": "*",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": ""
+					}
+				},
+				"url": {
+					"raw": "{{SiteUrl}}/_api/web/getfolderbyserverrelativeurl('/sites/TestCommunicationSite/megablogarticle')/files('Certificate-FF.Pdf')/ Versions",
+					"host": [
+						"{{SiteUrl}}"
+					],
+					"path": [
+						"_api",
+						"web",
+						"getfolderbyserverrelativeurl('",
+						"sites",
+						"TestCommunicationSite",
+						"megablogarticle')",
+						"files('Certificate-FF.Pdf')",
+						" Versions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "File CheckOut()",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"user-agent": true,
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-requestdigest",
+						"value": "0xAFB84890A44DCAFFD4DCAD4B2179AEEEA65D928FDF13D2EE46A901EAB8C61891FA5011397AF1237ADD17949198A1DECB2C7B54DE78FFA5D75C575AA163B67536,31 Jan 2024 18:33:09 -0000",
+						"type": "text"
+					},
+					{
+						"key": "X-HTTP-METHOD",
+						"value": "MERGE",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "IF-MATCH",
+						"value": "*",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": ""
+					}
+				},
+				"url": {
+					"raw": "{{SiteUrl}}/_api/web/getfilebyserverrelativeurl('/sites/TestCommunicationSite/megablogarticle/Certificate-TT.Pdf')/Checkout()",
+					"host": [
+						"{{SiteUrl}}"
+					],
+					"path": [
+						"_api",
+						"web",
+						"getfilebyserverrelativeurl('",
+						"sites",
+						"TestCommunicationSite",
+						"megablogarticle",
+						"Certificate-TT.Pdf')",
+						"Checkout()"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "File UndoCheckOut()",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"user-agent": true,
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-requestdigest",
+						"value": "0xA53659EFBC5433E172BA1FC5A9DC5C84FAB1BACCB34580E094428A46EE07F95D4401BFF4E20A8EFBFC738DAD3F025C3C0AF308ABE2864277E8D1968DE8DC6FB1,31 Jan 2024 18:03:02 -0000",
+						"type": "text"
+					},
+					{
+						"key": "X-HTTP-METHOD",
+						"value": "MERGE",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "IF-MATCH",
+						"value": "*",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": ""
+					}
+				},
+				"url": {
+					"raw": "{{SiteUrl}}/_api/web/getfilebyserverrelativeurl('/sites/TestCommunicationSite/megablogarticle/Certificate-TT.Pdf')/undoCheckout()",
+					"host": [
+						"{{SiteUrl}}"
+					],
+					"path": [
+						"_api",
+						"web",
+						"getfilebyserverrelativeurl('",
+						"sites",
+						"TestCommunicationSite",
+						"megablogarticle",
+						"Certificate-TT.Pdf')",
+						"undoCheckout()"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "File CheckIn()",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"user-agent": true,
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-requestdigest",
+						"value": "0xAFB84890A44DCAFFD4DCAD4B2179AEEEA65D928FDF13D2EE46A901EAB8C61891FA5011397AF1237ADD17949198A1DECB2C7B54DE78FFA5D75C575AA163B67536,31 Jan 2024 18:33:09 -0000",
+						"type": "text"
+					},
+					{
+						"key": "X-HTTP-METHOD",
+						"value": "MERGE",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "IF-MATCH",
+						"value": "*",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": ""
+					}
+				},
+				"url": {
+					"raw": "{{SiteUrl}}/_api/web/getfilebyserverrelativeurl('/sites/TestCommunicationSite/megablogarticle/Certificate-TT.Pdf')/CheckIn(comment='2nd checkin',checkintype=2)",
+					"host": [
+						"{{SiteUrl}}"
+					],
+					"path": [
+						"_api",
+						"web",
+						"getfilebyserverrelativeurl('",
+						"sites",
+						"TestCommunicationSite",
+						"megablogarticle",
+						"Certificate-TT.Pdf')",
+						"CheckIn(comment='2nd checkin',checkintype=2)"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add metadata to file",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"user-agent": true,
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-requestdigest",
+						"value": "0xA53659EFBC5433E172BA1FC5A9DC5C84FAB1BACCB34580E094428A46EE07F95D4401BFF4E20A8EFBFC738DAD3F025C3C0AF308ABE2864277E8D1968DE8DC6FB1,31 Jan 2024 18:03:02 -0000",
+						"type": "text"
+					},
+					{
+						"key": "X-HTTP-METHOD",
+						"value": "MERGE",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "IF-MATCH",
+						"value": "*",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"BlogTitle\": \"Certificate TT\",\r\n    \"Title\": \"Certificate\",\r\n    \"BlogContent\": \"Hello TT\",\r\n    \"UserEmail\": \"ss@sbs.com\",\r\n    \"BlogSlug\": \"SLUG TT\"\r\n}"
+				},
+				"url": {
+					"raw": "{{SiteUrl}}/_api/web/lists/getbytitle('megablogarticle')/items(107)",
+					"host": [
+						"{{SiteUrl}}"
+					],
+					"path": [
+						"_api",
+						"web",
+						"lists",
+						"getbytitle('megablogarticle')",
+						"items(107)"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CopyTo File  - will create new file with version 1",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"user-agent": true,
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-requestdigest",
+						"value": "0xDA78EAA4B8B5DFE12A709646EA44FE54707DD0AC1C273D0922DA6966374B38DF3E7426FE015ACD3D05D43846965B61AD8AEDD43A72BB6CFE91631852CE326CEE,30 Jan 2024 17:44:04 -0000",
+						"type": "text"
+					},
+					{
+						"key": "X-HTTP-METHOD",
+						"value": "MERGE",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "IF-MATCH",
+						"value": "*",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{SiteUrl}}/_api/web/getfilebyserverrelativeurl('/sites/TestCommunicationSite/megablogarticle/Certificate-FF.Pdf')/copyto('/sites/TestCommunicationSite/megablogarticle/New_Certificate-FF.Pdf')",
+					"host": [
+						"{{SiteUrl}}"
+					],
+					"path": [
+						"_api",
+						"web",
+						"getfilebyserverrelativeurl('",
+						"sites",
+						"TestCommunicationSite",
+						"megablogarticle",
+						"Certificate-FF.Pdf')",
+						"copyto('",
+						"sites",
+						"TestCommunicationSite",
+						"megablogarticle",
+						"New_Certificate-FF.Pdf')"
+					]
+				},
+				"description": "- Create a file based on another file as template\n- Duplicate a file with meta data"
+			},
+			"response": []
+		},
+		{
+			"name": "Rename File / Folder",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"user-agent": true,
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-requestdigest",
+						"value": "0x2D8E1C4CCFB1486E136F67AA2C00848FC5F227C8D9B882A3D6D58C6D6FA1DE7823CFE8B62F42E8EDEEC0406C4161913F0984ACB5F0FAD2B9983EEDFD836EE5B3,30 Jan 2024 18:14:14 -0000",
+						"type": "text"
+					},
+					{
+						"key": "X-HTTP-METHOD",
+						"value": "MERGE",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "IF-MATCH",
+						"value": "*",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"FileLeafRef\": \"Certificate-TT.Pdf\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{SiteUrl}}/_api/web/getfilebyserverrelativeurl('/sites/TestCommunicationSite/megablogarticle/Certificate-PP.Pdf')/ListItemAllFields",
+					"host": [
+						"{{SiteUrl}}"
+					],
+					"path": [
+						"_api",
+						"web",
+						"getfilebyserverrelativeurl('",
+						"sites",
+						"TestCommunicationSite",
+						"megablogarticle",
+						"Certificate-PP.Pdf')",
+						"ListItemAllFields"
+					]
+				},
+				"description": "- Create a file based on another file as template\n- Duplicate a file with meta data"
+			},
+			"response": []
+		},
+		{
+			"name": "MoveTo File - Will move all version of the file",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"user-agent": true,
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-requestdigest",
+						"value": "0x2D8E1C4CCFB1486E136F67AA2C00848FC5F227C8D9B882A3D6D58C6D6FA1DE7823CFE8B62F42E8EDEEC0406C4161913F0984ACB5F0FAD2B9983EEDFD836EE5B3,30 Jan 2024 18:14:14 -0000",
+						"type": "text"
+					},
+					{
+						"key": "X-HTTP-METHOD",
+						"value": "MERGE",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "IF-MATCH",
+						"value": "*",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{SiteUrl}}/_api/web/getfilebyserverrelativeurl('/sites/TestCommunicationSite/Shared%20Documents/1.Pdf')/moveto('/sites/TestCommunicationSite/megablogarticle/Certificate-TT.pdf')",
+					"host": [
+						"{{SiteUrl}}"
+					],
+					"path": [
+						"_api",
+						"web",
+						"getfilebyserverrelativeurl('",
+						"sites",
+						"TestCommunicationSite",
+						"Shared%20Documents",
+						"1.Pdf')",
+						"moveto('",
+						"sites",
+						"TestCommunicationSite",
+						"megablogarticle",
+						"Certificate-TT.pdf')"
+					]
+				},
+				"description": "- Create a file based on another file as template\n- Duplicate a file with meta data"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "SiteUrl",
+			"value": "https://pakur2.sharepoint.com/sites/TestCommunicationSite",
+			"type": "string"
+		}
+	]
+}
